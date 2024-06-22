@@ -1,0 +1,64 @@
+[
+    {
+        "main_topic": "Introduction to Reinforcement Learning",
+        "sub_topics": [
+            {
+                "sub_topic":"Fundamentals of Reinforcement Learning",
+                "url": "https://www.youtube.com/watch?v=2xATEwcRpy8&t=31s",
+                "captions": "abcd acnd"
+            },
+            {
+                "sub_topic":"Markov Decision Processes (MDPs)",
+                "url": "https://www.youtube.com/watch?v=my207WNoeyA",
+                "captions": "abcd annb"
+            },
+            {
+                "sub_topic":"Exploration vs Exploitation",
+                "url": "https://www.youtube.com/watch?v=mo96Nqlo1L8",
+                "captions": "abcd annb"
+            }
+        ],
+        "flash_cards": [
+            {
+                "content": "bjsabcouas oidscodsbci cubABCUsc cbhbubbdscsCUB NUHBDUVSADYUB"
+            },
+            {
+                "content": "bjsabcouas odbfhsabfjsa hsbdjsabdsad cbhbubbdscsCUB NUHBDUVSADYUB"
+            }
+        ],
+        "quiz":[
+            {
+                "question1":{
+                    "question": "Pehla sawal",
+                    "option1": "4 karod",
+                    "option2": "5 karod",
+                    "option3": "6 karod",
+                    "option4": "7 karod",
+                    "correct_response": "option B"
+                }
+            },
+
+            {
+                "question2":{
+                    "question": "Dusra sawal",
+                    "option1": "4 karod",
+                    "option2": "5 karod",
+                    "option3": "6 karod",
+                    "option4": "7 karod",
+                    "correct_response": "option C"
+                }
+            },
+
+            {
+                "question3":{
+                    "question": "Teesra sawal",
+                    "option1": "4 karod",
+                    "option2": "5 karod",
+                    "option3": "6 karod",
+                    "option4": "7 karod",
+                    "correct_response": "option D"
+                }
+            }
+        ]
+    }
+]
