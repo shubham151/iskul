@@ -5,17 +5,17 @@
             {
                 "sub_topic":"Fundamentals of Reinforcement Learning",
                 "url": "https://www.youtube.com/watch?v=2xATEwcRpy8&t=31s",
-                "captions": "abcd acnd"
+                "summary": "abcd acnd"
             },
             {
                 "sub_topic":"Markov Decision Processes (MDPs)",
                 "url": "https://www.youtube.com/watch?v=my207WNoeyA",
-                "captions": "abcd annb"
+                "summary": "abcd annb"
             },
             {
                 "sub_topic":"Exploration vs Exploitation",
                 "url": "https://www.youtube.com/watch?v=mo96Nqlo1L8",
-                "captions": "abcd annb"
+                "summary": "abcd annb"
             }
         ],
         "flash_cards": [

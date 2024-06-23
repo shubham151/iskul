@@ -1,12 +1,11 @@
 from youtubesearchpython import VideosSearch
 from youtube_transcript_api import YouTubeTranscriptApi
-from transcript_downloader import download_video
-from transcript_generator import whisper
-import json
+from services.transcript_downloader import download_video
+from services.transcript_generator import whisper
 from datetime import datetime
 
 def fetch_vids(topic_name):
-    videosSearch = VideosSearch(topic_name, limit = 5, region = "US")
+    videosSearch = VideosSearch(topic_name, limit = 1, region = "US")
     vid_srch = videosSearch.result()
     arr = []
     for i in vid_srch['result']:
@@ -32,6 +31,6 @@ def fetch_vids(topic_name):
     # return dt
 
 
-js = fetch_vids("Dynamic programming+Advanced Dynamic Programming Concepts+Dynamic Programming on Trees")
-with open("test.txt", 'w') as file:
-    json.dump(js, file, indent=4)
+# js = fetch_vids("Dynamic programming+Advanced Dynamic Programming Concepts+Dynamic Programming on Trees")
+# with open("test.txt", 'w') as file:
+#     json.dump(js, file, indent=4)

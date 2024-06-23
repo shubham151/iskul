@@ -2,31 +2,31 @@
     "quiz": [
         {
             "question1": {
-                "question": "What is the main advantage of using tabulation Dynamic Programming over memorization?",
-                "option1": "It uses more stack memory",
-                "option2": "It uses less heap memory",
-                "option3": "It avoids stack overflow due to limited stack memory",
-                "option4": "It takes more time than recursive solutions",
+                "question": "What is the minimum Python knowledge required to follow Suraj's six-week deep learning curriculum?",
+                "option1": "Advanced",
+                "option2": "Intermediate",
+                "option3": "Basic",
+                "option4": "None",
                 "correct_response": "option3"
             }
         },
         {
             "question2": {
-                "question": "What is the significance of the first row and first column in the dynamic programming table for the 0/1 Knapsack problem?",
-                "option1": "They represent the maximum profit for each item",
-                "option2": "They represent the minimum weight for each item",
-                "option3": "They are always zero, representing the base case where there are no items or the capacity of the bag is zero",
-                "option4": "They are used to store the intermediate results of the recursion",
+                "question": "What is the purpose of an experience replay buffer in deep Q-learning?",
+                "option1": "To store the Q table",
+                "option2": "To test the understanding of the concepts",
+                "option3": "To collect data to train the Q network",
+                "option4": "To decide actions for the robot",
                 "correct_response": "option3"
             }
         },
         {
             "question3": {
-                "question": "What is the time complexity of filling the dp table in the knapsack problem?",
-                "option1": "O(2^n)",
-                "option2": "O(n*w^2)",
-                "option3": "O(n*w)",
-                "option4": "O(w)",
+                "question": "What is the benefit of separating Q-values into state values and advantage functions in the dueling network approach?",
+                "option1": "It slows down the learning process",
+                "option2": "It makes the network more prone to noisy updates",
+                "option3": "It enables faster and more reliable learning",
+                "option4": "It reduces the overall performance in game playing tasks",
                 "correct_response": "option3"
             }
         }
