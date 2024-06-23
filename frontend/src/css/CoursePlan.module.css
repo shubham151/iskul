@@ -1,20 +1,19 @@
 .coursePlanContainer {
-  display: flex;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
 }
 
 .sidebar {
-  width: 250px;
+  max-width: 25% !important;
   background-color: #1f1e1e;
-  padding: 20px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .mainContent {
   flex: 1;
-  padding: 20px;
 }
+
+
 
 .videoContainer {
   margin-bottom: 20px;
@@ -53,7 +52,6 @@
   
   .sidebar h2 {
     margin: 0;
-    padding: 10px;
     background-color: #343a40;
     color: white;
     cursor: pointer;
@@ -61,14 +59,19 @@
   
   .sidebar ul {
     list-style-type: none;
-    padding-left: 20px;
     margin: 0;
   }
+
+ 
   
-  .sidebar ul li {
-    padding: 5px 0;
-    cursor: pointer;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding-left: none !important;
+    text-align: left;
   }
+  
   
   .sidebar ul li:hover {
     background-color: #1f1e1e;;
@@ -76,7 +79,6 @@
   
   .mainContent {
     flex-grow: 1;
-    padding: 20px;
   }
   
   .videoContainer iframe {

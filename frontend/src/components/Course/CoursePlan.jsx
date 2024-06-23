@@ -43,13 +43,12 @@ function CoursePlan() {
 
   return (
     <div className={styles.coursePlanContainer}>
-     <Sidebar aria-label="Sidebar with multi-level dropdown example">
+     <Sidebar aria-label="Sidebar with multi-level dropdown" className={styles.sidebar}>
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           {data.map((topic, topicIndex) => (
             <Sidebar.Collapse
               key={topicIndex}
-              icon={HiShoppingBag}
               label={topic.main_topic}
               isOpen={expandedTopics[topicIndex]}
               onToggle={() => handleTopicToggle(topicIndex)}
