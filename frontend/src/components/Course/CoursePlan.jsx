@@ -107,7 +107,7 @@ function CoursePlan() {
               title="Course Video"
             ></iframe>
             <div className={styles.summary}>
-              <h3>Captions</h3>
+              <h3>Summary</h3>
               <p>{selectedSubTopic.captions}</p>
             </div>
           </div>
