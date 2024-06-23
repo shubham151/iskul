@@ -3,6 +3,7 @@
   margin: 0 auto;
   text-align: center;
   min-width: 100vw;
+  min-height: 100vh;
   background-color: #282c34;
 }
 
@@ -10,9 +11,10 @@
   color: rgb(75, 72, 72);
   opacity: 1; /* Firefox */
 }
-.label {
+label {
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
 
 .logo {
