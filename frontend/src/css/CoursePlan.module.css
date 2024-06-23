@@ -1,6 +1,7 @@
 .coursePlanContainer {
   display: flex;
   height: 100vh;
+  color: white;
 }
 
 .sidebar {

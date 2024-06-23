@@ -3,6 +3,16 @@
   margin: 0 auto;
   text-align: center;
   min-width: 100vw;
+  background-color: #282c34;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(75, 72, 72);
+  opacity: 1; /* Firefox */
+}
+.label {
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {
