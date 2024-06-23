@@ -1,25 +1,34 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import styles from '../../css/HomePage.module.css';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Homepage() {
+
+
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       topic: '',
       hours: '',
     },
-    onSubmit: (values) => {
-        const output = {
-            "topic": values.topic,
-            "max_duration_in_hours": values.hours
-        }
-        console.log(output);
-      
+    onSubmit: async (values) => {
+      try {
+        const response = {};
+        console.log("values", values);
+        // const response = await axios.post('', values);
+        navigate('/course-plan', { state: { data: response.data } });
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
     },
   });
 
   return (
-    <div className={styles.Homepage}>
+    <div className={styles.Homepage + "text-center my-5"}>
       <header className={styles['Homepage-header']}>
         <h1>Learning Planner</h1>
         <form onSubmit={formik.handleSubmit}>

@@ -1,0 +1,45 @@
+.coursePlanContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1f1e1e;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+.videoContainer {
+  margin-bottom: 20px;
+}
+
+.summary {
+  background-color: #1f1e1e;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.flashCards {
+  margin-top: 20px;
+}
+
+.flashCard {
+  background-color: #1f1e1e;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.quiz {
+  margin-top: 20px;
+}
+
+.quizQuestion {
+  margin-bottom: 20px;
+}
