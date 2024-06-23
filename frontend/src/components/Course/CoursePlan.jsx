@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 import styles from "../../css/CoursePlan.module.css";
 import tempData from "../../../../data/secondPageInput.json";
-
+import FlashCard from './FlashCard';
 function CoursePlan() {
   const location = useLocation("../../../data/");
   //   const { data } = location.state || {};
@@ -12,7 +12,7 @@ function CoursePlan() {
   );
   const [selectedMainTopicIndex, setSelectedMainTopicIndex] = useState(0);
   const [activeSection, setActiveSection] = useState('course');
-
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   if (!data) {
     return <p>No data available</p>;
@@ -24,6 +24,18 @@ function CoursePlan() {
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
+  };
+  const handleNext = () => {
+    setCurrentCardIndex((prevIndex) =>
+      (prevIndex + 1) % data[selectedMainTopicIndex].flash_cards.length
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentCardIndex((prevIndex) =>
+      (prevIndex - 1 + data[selectedMainTopicIndex].flash_cards.length) %
+      data[selectedMainTopicIndex].flash_cards.length
+    );
   };
 
   return (
@@ -66,13 +78,15 @@ function CoursePlan() {
           </div>
         )}
         {activeSection === 'flashcard' && data[selectedMainTopicIndex].flash_cards && (
-          <div className={styles.flashCards}>
-            <h3>Flash Cards</h3>
-            {data[selectedMainTopicIndex].flash_cards.map((card, index) => (
-              <div key={index} className={styles.flashCard}>
-                <p>{card.content}</p>
+          <div>
+            <h2>Flash Cards</h2>
+              <div className={styles.flashCards}>
+                <FlashCard cardData={data[selectedMainTopicIndex].flash_cards[currentCardIndex]}></FlashCard>
               </div>
-            ))}
+            <div>
+              <button className={styles.navButtons} onClick={handlePrev}>Prev</button>
+              <button className={styles.navButtons} onClick={handleNext}>Next</button>
+            </div>
           </div>
         )}
         {activeSection === 'quiz' && data[selectedMainTopicIndex].quiz && (

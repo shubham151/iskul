@@ -1,19 +1,20 @@
 .coursePlanContainer {
   display: flex;
   height: 100vh;
-  color: white;
+  color: rgb(237, 231, 231);
 }
 
 .sidebar {
   width: 250px;
-  background-color: #1f1e1e;
+  background-color: rgb(9, 25, 55);
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 5px rgba(11, 1, 1, 0.1);
 }
 
 .mainContent {
   flex: 1;
   padding: 20px;
+  background-color: rgb(19, 27, 80);
 }
 
 .videoContainer {
@@ -28,14 +29,11 @@
 
 .flashCards {
   margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.flashCard {
-  background-color: #1f1e1e;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-}
+
 
 .quiz {
   margin-top: 20px;
@@ -43,4 +41,8 @@
 
 .quizQuestion {
   margin-bottom: 20px;
+}
+
+.navButtons{
+  margin: 10px;
 }
