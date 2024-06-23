@@ -1,0 +1,34 @@
+Here is a structured list of topics to learn for Dynamic Programming at an Advanced level:
+
+1) Memoization
+    a) Top-Down Approach
+    b) Memoization Table
+    c) Memoization vs Tabulation
+
+2) Tabulation
+    a) Bottom-Up Approach
+    b) Tabulation Table
+    c) Filling Tables Iteratively
+    d) Filling Tables Recursively
+
+3) Dynamic Programming Optimization Techniques
+    a) State Compression
+    b) Transition Compression
+    c) Dominance Relation
+    d) bitmasking and Bit Manipulation
+    e) Matrix Exponentiation
+
+4) Advanced Dynamic Programming Concepts
+    a) 0-1 Knapsack with Unbounded Items
+    b) Activity Selection Problem
+    c) Suffix Tree and Dynamic Programming
+    d) Linearity of Expectation
+    e) Policy Iteration and Value Iteration
+    f) Dynamic Programming on Trees
+
+5) Dynamic Programming on Special Data Structures
+    a) Dynamic Programming on Suffix Arrays
+    b) Dynamic Programming on Range Minimum Query
+    c) Dynamic Programming on Segment Trees
+    d) Dynamic Programming on Trie
+    e) Dynamic Programming on Suffix Trees

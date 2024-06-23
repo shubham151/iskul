@@ -14,12 +14,14 @@ chat_completion = client.chat.completions.create(
     messages=[
         {
             "role": "user",
-            "content": first_page_output_prompt("React JS","Beginner"),
+            "content": first_page_output_prompt("Dynamic Programming","Advanced"),
         }
     ],
     model="llama3-70b-8192",
 )
 
-with open("./output.txt", 'w') as file:
-    file.write(chat_completion.choices[0].message.content)
+content = chat_completion.choices[0].message.content
+
+with open("./outputs/output_topic_list.txt", 'w') as file:
+    file.write(content)
 

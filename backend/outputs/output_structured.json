@@ -1,0 +1,96 @@
+[
+    {
+        "main_topic": "Memoization",
+        "sub_topics": [
+            {
+                "sub_topic": "Top-Down Approach"
+            },
+            {
+                "sub_topic": "Memoization Table"
+            },
+            {
+                "sub_topic": "Memoization vs Tabulation"
+            }
+        ]
+    },
+    {
+        "main_topic": "Tabulation",
+        "sub_topics": [
+            {
+                "sub_topic": "Bottom-Up Approach"
+            },
+            {
+                "sub_topic": "Tabulation Table"
+            },
+            {
+                "sub_topic": "Filling Tables Iteratively"
+            },
+            {
+                "sub_topic": "Filling Tables Recursively"
+            }
+        ]
+    },
+    {
+        "main_topic": "Dynamic Programming Optimization Techniques",
+        "sub_topics": [
+            {
+                "sub_topic": "State Compression"
+            },
+            {
+                "sub_topic": "Transition Compression"
+            },
+            {
+                "sub_topic": "Dominance Relation"
+            },
+            {
+                "sub_topic": "bitmasking and Bit Manipulation"
+            },
+            {
+                "sub_topic": "Matrix Exponentiation"
+            }
+        ]
+    },
+    {
+        "main_topic": "Advanced Dynamic Programming Concepts",
+        "sub_topics": [
+            {
+                "sub_topic": "0-1 Knapsack with Unbounded Items"
+            },
+            {
+                "sub_topic": "Activity Selection Problem"
+            },
+            {
+                "sub_topic": "Suffix Tree and Dynamic Programming"
+            },
+            {
+                "sub_topic": "Linearity of Expectation"
+            },
+            {
+                "sub_topic": "Policy Iteration and Value Iteration"
+            },
+            {
+                "sub_topic": "Dynamic Programming on Trees"
+            }
+        ]
+    },
+    {
+        "main_topic": "Dynamic Programming on Special Data Structures",
+        "sub_topics": [
+            {
+                "sub_topic": "Dynamic Programming on Suffix Arrays"
+            },
+            {
+                "sub_topic": "Dynamic Programming on Range Minimum Query"
+            },
+            {
+                "sub_topic": "Dynamic Programming on Segment Trees"
+            },
+            {
+                "sub_topic": "Dynamic Programming on Trie"
+            },
+            {
+                "sub_topic": "Dynamic Programming on Suffix Trees"
+            }
+        ]
+    }
+]
