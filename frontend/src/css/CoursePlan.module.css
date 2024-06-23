@@ -7,10 +7,24 @@
   max-width: 25% !important;
   background-color: #1f1e1e;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+
+  display: flex;
+  height: 100vh;
+  color: rgb(237, 231, 231);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: rgb(9, 25, 55);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(11, 1, 1, 0.1);
 }
 
 .mainContent {
   flex: 1;
+
+  padding: 20px;
+  background-color: rgb(19, 27, 80);
 }
 
 
@@ -27,14 +41,11 @@
 
 .flashCards {
   margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.flashCard {
-  background-color: #1f1e1e;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-}
+
 
 .quiz {
   margin-top: 20px;
@@ -101,3 +112,6 @@
     border: 1px solid #dee2e6;
   }
   
+.navButtons{
+  margin: 10px;
+}
