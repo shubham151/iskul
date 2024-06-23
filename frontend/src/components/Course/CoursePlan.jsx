@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from "react-router-dom";
-import styles from "../../css/CoursePlan.module.css";
-import tempData from "../../../../data/secondPageInput.json";
+import { useLocation } from 'react-router-dom';
+import styles from '../../css/CoursePlan.module.css';
+import tempData from '../../../../data/secondPageInput.json';
+import { Sidebar } from 'flowbite-react';
+import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineMinusSm, HiOutlinePlusSm, HiShoppingBag, HiTable, HiUser } from 'react-icons/hi';
+import { twMerge } from 'tailwind-merge';
+
 import FlashCard from './FlashCard';
 function CoursePlan() {
-  const location = useLocation("../../../data/");
+  const location = useLocation('../../../data/');
   //   const { data } = location.state || {};
   const data = tempData;
-  const [selectedSubTopic, setSelectedSubTopic] = useState(
-    data?.[0]?.sub_topics?.[0] || null
-  );
+  const [selectedSubTopic, setSelectedSubTopic] = useState(data?.[0]?.sub_topics?.[0] || null);
   const [selectedMainTopicIndex, setSelectedMainTopicIndex] = useState(0);
   const [activeSection, setActiveSection] = useState('course');
+  const [expandedTopics, setExpandedTopics] = useState({});
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   if (!data) {
@@ -20,6 +23,7 @@ function CoursePlan() {
 
   const handleSubTopicClick = (subTopic) => {
     setSelectedSubTopic(subTopic);
+    setActiveSection('course');
   };
 
   const handleSectionClick = (section) => {
@@ -38,29 +42,53 @@ function CoursePlan() {
     );
   };
 
+  const handleTopicClick = (index) => {
+    setExpandedTopics((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+    setSelectedMainTopicIndex(index);
+  };
+
+  const renderChevronIcon = (theme, open) => {
+    const IconComponent = open ? HiOutlineMinusSm : HiOutlinePlusSm;
+    return <IconComponent className={twMerge(theme.label.icon.open[open ? 'on' : 'off'])} />;
+  };
+
   return (
     <div className={styles.coursePlanContainer}>
-        
-        <div className={styles.sidebar}>
-        {data.map((topic, topicIndex) => (
-            
-          <div key={topicIndex}>
-            <h2>{topic.main_topic}</h2>
-            <ul>
-              {topic.sub_topics.map((subTopic, index) => (
-                <li key={index} onClick={() => handleSubTopicClick(subTopic)}>
+     <Sidebar aria-label="Sidebar with multi-level dropdown" className={styles.sidebar}>
+      <Sidebar.Items>
+        <Sidebar.ItemGroup>
+          {data.map((topic, topicIndex) => (
+            <Sidebar.Collapse
+              key={topicIndex}
+              label={topic.main_topic}
+              isOpen={expandedTopics[topicIndex]}
+              onToggle={() => handleTopicToggle(topicIndex)}
+              renderChevronIcon={renderChevronIcon}
+            >
+              <>
+                {topic.sub_topics.map((subTopic, subIndex) => (
+                  <Sidebar.Item className={styles.sidebarItem} onClick={() => handleSubTopicClick(subTopic)}>
                   {subTopic.sub_topic}
-                </li>
-              ))}
-              <li onClick={() => handleSectionClick('flashcard')}>FlashCard</li>
-              <li onClick={() => handleSectionClick('quiz')}>Quiz</li>
-            </ul>
-            
-          </div>
-        ))}
-        </div>
+                </Sidebar.Item>
+                ))}
+                <Sidebar.Item onClick={() => handleSectionClick('flashcard')}>
+                  FlashCard
+                </Sidebar.Item>
+                <Sidebar.Item onClick={() => handleSectionClick('quiz')}>
+                  Quiz
+                </Sidebar.Item>
+              </>
+            </Sidebar.Collapse>
+          ))}
+        </Sidebar.ItemGroup>
+      </Sidebar.Items>
+    </Sidebar>
+
       <div className={styles.mainContent}>
-        {activeSection == "course" && selectedSubTopic && (
+        {activeSection === 'course' && selectedSubTopic && (
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
