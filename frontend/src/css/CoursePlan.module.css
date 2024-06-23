@@ -44,3 +44,58 @@
 .quizQuestion {
   margin-bottom: 20px;
 }
+
+
+.coursePlanContainer {
+    display: flex;
+  }
+  
+  
+  .sidebar h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #1f1e1e;;
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .videoContainer iframe {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .summary {
+    margin-top: 20px;
+  }
+  
+  .flashCards, .quiz {
+    margin-top: 20px;
+  }
+  
+  .flashCard, .quizQuestion {
+    background-color:  #1f1e1e;;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+  }
+  
