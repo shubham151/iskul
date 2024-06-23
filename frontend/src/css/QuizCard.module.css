@@ -1,0 +1,18 @@
+.quizCard{
+        background-color: #023943 !important;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border-color: #dde6e9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        display: flex ;
+        height: 350px;
+}
+.optionDiv{
+    margin-top: 75px;
+    margin-bottom: 10px;
+    
+
+}

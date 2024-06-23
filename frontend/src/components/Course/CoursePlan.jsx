@@ -8,6 +8,7 @@ import { FaBookOpen } from "react-icons/fa"
 import { twMerge } from 'tailwind-merge';
 
 import FlashCard from './FlashCard';
+import QuizCard from './QuizCard';
 function CoursePlan() {
   const location = useLocation('../../../data/');
   //   const { data } = location.state || {};
@@ -128,7 +129,7 @@ function CoursePlan() {
         {activeSection === 'quiz' && data[selectedMainTopicIndex].quiz && (
           <div className={styles.quiz}>
             <h3>Quiz</h3>
-            {data[selectedMainTopicIndex].quiz.map((q, index) => {
+            {/* {data[selectedMainTopicIndex].quiz.map((q, index) => {
               const questionKey = Object.keys(q)[0];
               const questionData = q[questionKey];
               return (
@@ -143,7 +144,8 @@ function CoursePlan() {
                   <p>Correct Answer: {questionData.correct_response}</p>
                 </div>
               );
-            })}
+            })} */}
+            <QuizCard></QuizCard>
           </div>
         )}
       </div>
