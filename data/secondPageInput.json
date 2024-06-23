@@ -16,6 +16,11 @@
                 "sub_topic":"Exploration vs Exploitation",
                 "url": "https://www.youtube.com/watch?v=mo96Nqlo1L8",
                 "captions": "abcd annb"
+            },
+            {
+                "sub_topic":"Fundamentals of Reinforcement Learning",
+                "url": "https://www.youtube.com/watch?v=2xATEwcRpy8&t=31s",
+                "captions": "abcd acnd"
             }
         ],
         "flash_cards": [
