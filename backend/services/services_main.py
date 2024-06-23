@@ -1,6 +1,6 @@
 import json
 from services.flash_card_generator import generate_flash_cards
-from services.quiz_generator import parse_questions_with_regex
+from services.quiz_generator import generate_quiz
 from services.summary_generator import generate_summary
 from services.topic_generator import generate_topics
 from services.video_fetcher import fetch_vids
@@ -40,7 +40,7 @@ def service(user_input):
                 "summary": summary
             })
         
-        quiz = parse_questions_with_regex(summaries)
+        quiz = generate_quiz(summaries)
         flash_cards = generate_flash_cards(summaries)
         topic_body["flash_cards"] = flash_cards
         topic_body["quiz"] = quiz

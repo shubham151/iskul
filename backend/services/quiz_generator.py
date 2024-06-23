@@ -1,6 +1,6 @@
 from utils.groq_client import client 
 from utils.constants import question_prompt
-from utils.question_response_parser import question_parser
+from utils.question_response_parser import parse_questions_with_regex
 
 def generate_quiz(txts):
     questions = []
@@ -16,6 +16,6 @@ def generate_quiz(txts):
         )
         
         questions.append(question.choices[0].message.content)
-    qq = question_parser(questions)
+    qq = parse_questions_with_regex(questions)
     return qq
     
