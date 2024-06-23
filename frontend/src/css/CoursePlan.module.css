@@ -13,12 +13,7 @@
   color: rgb(237, 231, 231);
 }
 
-.sidebar {
-  width: 250px;
-  background-color: rgb(9, 25, 55);
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(11, 1, 1, 0.1);
-}
+
 
 .mainContent {
   flex: 1;
