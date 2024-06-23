@@ -17,7 +17,8 @@ pip install -e .
 python app.py
 ```
 
-### For execution, navigate to `frontend` directory and execute below command:
+### Execution
+To execute, navigate to `frontend` directory and execute below command:
 
 ```bash
 npm run dev
