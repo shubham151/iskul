@@ -1,34 +1,35 @@
-Here is a structured list of topics to learn for Dynamic Programming at an Advanced level:
+Here is a structured list of topics to learn for Dynamic Programming at an advanced level:
 
-1) Memoization
-    a) Top-Down Approach
-    b) Memoization Table
-    c) Memoization vs Tabulation
+1) Foundation of Dynamic Programming
+    a) Bellman's Principle of Optimality
+    b) Dynamic Programming vs. Memoization
+    c) Memoization Techniques
 
-2) Tabulation
-    a) Bottom-Up Approach
-    b) Tabulation Table
-    c) Filling Tables Iteratively
-    d) Filling Tables Recursively
+2) Problem Modeling and Formulation
+    a) State Transition Modeling
+    b) Policy and Value Functions
+    c) Problem Formulation using DAGs (Directed Acyclic Graphs)
+    d) Tabular Representations
 
-3) Dynamic Programming Optimization Techniques
-    a) State Compression
-    b) Transition Compression
-    c) Dominance Relation
-    d) bitmasking and Bit Manipulation
-    e) Matrix Exponentiation
+3) Dynamic Programming Algorithms
+    a) Top-Down Dynamic Programming
+    b) Bottom-Up Dynamic Programming
+    c) Memoized Dynamic Programming
+    d) Tabulation Methods
+    e) Matrix Chain Multiplication
+    f) Longest Common Subsequence
 
-4) Advanced Dynamic Programming Concepts
-    a) 0-1 Knapsack with Unbounded Items
-    b) Activity Selection Problem
-    c) Suffix Tree and Dynamic Programming
-    d) Linearity of Expectation
-    e) Policy Iteration and Value Iteration
-    f) Dynamic Programming on Trees
+4) Advanced Dynamic Programming Techniques
+    a) Bit Manipulation in Dynamic Programming
+    b) Dynamic Programming on Trees
+    c) Dynamic Programming on Grids
+    d) Dynamic Programming on Strings
+    e) Dynamic Programming with Linear Programming Relaxation
+    f) Approximation Algorithms using Dynamic Programming
 
-5) Dynamic Programming on Special Data Structures
-    a) Dynamic Programming on Suffix Arrays
-    b) Dynamic Programming on Range Minimum Query
-    c) Dynamic Programming on Segment Trees
-    d) Dynamic Programming on Trie
-    e) Dynamic Programming on Suffix Trees
+5) Applications and Variants of Dynamic Programming
+    a) Dynamic Programming in Bioinformatics
+    b) Dynamic Programming in Machine Learning
+    c) Dynamic Programming in Operations Research
+    d) Stochastic Dynamic Programming
+    e) Adaptive Dynamic Programming

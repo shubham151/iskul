@@ -37,5 +37,3 @@ parsed_data = parse_input_text(input_text)
 
 # Save the parsed data as JSON
 save_as_json(parsed_data, 'outputs/output_structured.json')
-
-print("Data has been saved to 'output.json'.")
