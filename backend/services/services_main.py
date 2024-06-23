@@ -28,20 +28,27 @@ def service(user_input):
         topic_body["sub_topic"] = []
         summaries = []
         for sub_topic in topic["sub_topics"]:
-            vid = fetch_vids(f"{topic_name}+{main_topic}+{sub_topic}")[0]
-            sub_topic_title = vid['title']
-            link = vid['link']
-            transcript = vid['transcript']
-            summary = generate_summary(transcript)
-            summaries.append(summary)
-            topic_body["sub_topic"].append({
-                "sub_topic": sub_topic_title,
-                "url": link,
-                "summary": summary
-            })
-        
+            try:
+                vid = fetch_vids(f"{topic_name}+{main_topic}+{sub_topic}")[0]
+                print("video fetched")
+                sub_topic_title = vid['title']
+                link = vid['link']
+                transcript = vid['transcript']
+                summary = generate_summary(transcript, f"{topic_name}+{main_topic}+{sub_topic}")
+                print("summary done")
+                summaries.append(summary)
+                topic_body["sub_topic"].append({
+                    "sub_topic": sub_topic_title,
+                    "url": link,
+                    "summary": summary
+                })
+            except IndexError as i:
+                continue
+            
         quiz = generate_quiz(summaries)
+        print("quiz generated")
         flash_cards = generate_flash_cards(summaries)
+        print("flash card generated")
         topic_body["flash_cards"] = flash_cards
         topic_body["quiz"] = quiz
         response.append(topic_body)
