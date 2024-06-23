@@ -104,7 +104,7 @@ function CoursePlan() {
         className={styles.sidebar}
       >
         <div className={styles.logoContainer}>
-          <h1 className={styles.projectName}>Iskul</h1>
+          <h1 className={styles.projectName}>iskul</h1>
           <hr/>
         </div>
         <Sidebar.Items>
