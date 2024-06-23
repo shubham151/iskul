@@ -1,0 +1,35 @@
+Here is a structured list of topics to learn for Dynamic Programming at an advanced level:
+
+1) Foundation of Dynamic Programming
+    a) Bellman's Principle of Optimality
+    b) Dynamic Programming vs. Memoization
+    c) Memoization Techniques
+
+2) Problem Modeling and Formulation
+    a) State Transition Modeling
+    b) Policy and Value Functions
+    c) Problem Formulation using DAGs (Directed Acyclic Graphs)
+    d) Tabular Representations
+
+3) Dynamic Programming Algorithms
+    a) Top-Down Dynamic Programming
+    b) Bottom-Up Dynamic Programming
+    c) Memoized Dynamic Programming
+    d) Tabulation Methods
+    e) Matrix Chain Multiplication
+    f) Longest Common Subsequence
+
+4) Advanced Dynamic Programming Techniques
+    a) Bit Manipulation in Dynamic Programming
+    b) Dynamic Programming on Trees
+    c) Dynamic Programming on Grids
+    d) Dynamic Programming on Strings
+    e) Dynamic Programming with Linear Programming Relaxation
+    f) Approximation Algorithms using Dynamic Programming
+
+5) Applications and Variants of Dynamic Programming
+    a) Dynamic Programming in Bioinformatics
+    b) Dynamic Programming in Machine Learning
+    c) Dynamic Programming in Operations Research
+    d) Stochastic Dynamic Programming
+    e) Adaptive Dynamic Programming
