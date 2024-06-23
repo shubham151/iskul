@@ -17,6 +17,9 @@ import { FaBookOpen } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 
 import FlashCard from "./FlashCard";
+import QuizQuestion from "../Quiz/QuizQuestion";
+import YouTube from "react-youtube";
+
 function CoursePlan() {
   const location = useLocation("../../../data/");
   //   const { data } = location.state || {};
@@ -36,19 +39,19 @@ function CoursePlan() {
     return <p>No data available</p>;
   }
 
+  const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
+  const [quizScore, setQuizScore] = useState(null);
+
   const handleSubTopicClick = (subTopic) => {
     setSelectedSubTopic(subTopic);
     setActiveSubTopic(subTopic);
-    if(subTopic != "others") {
-        setActiveSection("course");
-        setActiveSidebarItem("course");
+    if (subTopic != "others") {
+      setActiveSection("course");
     }
-    
   };
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
-    setActiveSidebarItem(section);
   };
 
   const handleNext = () => {
@@ -81,6 +84,14 @@ function CoursePlan() {
         className={twMerge(theme.label.icon.open[open ? "on" : "off"])}
       />
     );
+  };
+
+  const handleNextQuizQuestion = () => {
+    setCurrentQuizIndex((prevIndex) => prevIndex + 1);
+  };
+
+  const handleQuizFinish = (score) => {
+    setQuizScore(score);
   };
 
   return (
@@ -118,9 +129,8 @@ function CoursePlan() {
                       activeSection === "flashcard" ? styles.activeSubItem : ""
                     }`}
                     onClick={() => {
-                      handleSubTopicClick("others")
+                      handleSubTopicClick("others");
                       handleSectionClick("flashcard");
-                      
                     }}
                   >
                     FlashCard
@@ -146,15 +156,10 @@ function CoursePlan() {
       <div className={styles.mainContent}>
         {activeSection === "course" && selectedSubTopic && (
           <div className={styles.videoContainer}>
-            <iframe
-              width="100%"
-              height="400"
-              src={selectedSubTopic.url}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Course Video"
-            ></iframe>
+            <YouTube
+              videoId={selectedSubTopic.url}
+              className={styles.youtubePlayer}
+            />
             <div className={styles.summary}>
               <h3>Summary</h3>
               <p>{selectedSubTopic.captions}</p>
@@ -185,22 +190,21 @@ function CoursePlan() {
         {activeSection === "quiz" && data[selectedMainTopicIndex].quiz && (
           <div className={styles.quiz}>
             <h3>Quiz</h3>
-            {data[selectedMainTopicIndex].quiz.map((q, index) => {
-              const questionKey = Object.keys(q)[0];
-              const questionData = q[questionKey];
-              return (
-                <div key={index} className={styles.quizQuestion}>
-                  <p>{questionData.question}</p>
-                  <ul>
-                    <li>{questionData.option1}</li>
-                    <li>{questionData.option2}</li>
-                    <li>{questionData.option3}</li>
-                    <li>{questionData.option4}</li>
-                  </ul>
-                  <p>Correct Answer: {questionData.correct_response}</p>
-                </div>
-              );
-            })}
+            {currentQuizIndex < data[selectedMainTopicIndex].quiz.length ? (
+              <QuizQuestion
+                questionData={
+                  data[selectedMainTopicIndex].quiz[currentQuizIndex]
+                }
+                onNext={handleNextQuizQuestion}
+                totalQuestions={data[selectedMainTopicIndex].quiz.length}
+                onQuizFinish={handleQuizFinish}
+              />
+            ) : (
+              <div className={styles.quizScore}>
+                <p>Quiz Completed!</p>
+                <p>Your Score: {quizScore}%</p>
+              </div>
+            )}
           </div>
         )}
       </div>

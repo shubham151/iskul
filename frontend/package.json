@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
+    "react-youtube": "^10.1.0",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {

@@ -4,17 +4,17 @@
         "sub_topics": [
             {
                 "sub_topic":"Fundamentals of Reinforcement Learning",
-                "url": "https://www.youtube.com/watch?v=2xATEwcRpy8&t=31s",
+                "url": "my207WNoeyA",
                 "captions": "abcd acnd"
             },
             {
                 "sub_topic":"Markov Decision Processes (MDPs)",
-                "url": "https://www.youtube.com/watch?v=my207WNoeyA",
+                "url": "my207WNoeyA",
                 "captions": "abcd annb"
             },
             {
                 "sub_topic":"Exploration vs Exploitation",
-                "url": "https://www.youtube.com/watch?v=mo96Nqlo1L8",
+                "url": "mo96Nqlo1L8",
                 "captions": "abcd annb"
             }
         ],
@@ -33,7 +33,7 @@
                 "option2": "5 karod",
                 "option3": "6 karod",
                 "option4": "7 karod",
-                "correct_response": "option B"
+                "correct_response": "4 karod"
             },
             {
                 "question": "Dusra sawal",
@@ -41,7 +41,7 @@
                 "option2": "5 karod",
                 "option3": "6 karod",
                 "option4": "7 karod",
-                "correct_response": "option C"
+                "correct_response": "6 karod"
             },
             {
                 "question": "Teesra sawal",
@@ -49,12 +49,8 @@
                 "option2": "5 karod",
                 "option3": "6 karod",
                 "option4": "7 karod",
-                "correct_response": "option D"
+                "correct_response": "7 karod"
             }
-
-            
-
-            
         ]
     },
     {
@@ -62,17 +58,17 @@
         "sub_topics": [
             {
                 "sub_topic":"Fundamentals of Reinforcement Learning",
-                "url": "https://www.youtube.com/watch?v=2xATEwcRpy8&t=31s",
+                "url": "my207WNoeyA",
                 "captions": "abcd acnd"
             },
             {
                 "sub_topic":"Markov Decision Processes (MDPs)",
-                "url": "https://www.youtube.com/watch?v=my207WNoeyA",
+                "url": "my207WNoeyA",
                 "captions": "abcd annb"
             },
             {
                 "sub_topic":"Exploration vs Exploitation",
-                "url": "https://www.youtube.com/watch?v=mo96Nqlo1L8",
+                "url": "mo96Nqlo1L8",
                 "captions": "abcd annb"
             }
         ],
@@ -91,7 +87,7 @@
                 "option2": "5 karod",
                 "option3": "6 karod",
                 "option4": "7 karod",
-                "correct_response": "option B"
+                "correct_response": "4 karod"
             },
             {
                 "question": "Dusra sawal",
@@ -99,7 +95,7 @@
                 "option2": "5 karod",
                 "option3": "6 karod",
                 "option4": "7 karod",
-                "correct_response": "option C"
+                "correct_response": "6 karod"
             },
             {
                 "question": "Teesra sawal",
@@ -107,7 +103,7 @@
                 "option2": "5 karod",
                 "option3": "6 karod",
                 "option4": "7 karod",
-                "correct_response": "option D"
+                "correct_response": "7 karod"
             }
         ]
     }
