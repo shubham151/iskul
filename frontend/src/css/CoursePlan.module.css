@@ -44,6 +44,7 @@
 .SidebarCollapse {
   min-width: 100% !important;
   border-color: aliceblue;
+  border-width: 1pt;
 }
 
 
@@ -85,9 +86,12 @@
 
   
   .sidebar ul li:hover {
-    background-color: #1f1e1e;;
+    background-color: #1f1e1e;
+
   }
   
+  
+
   .mainContent {
     flex-grow: 1;
   }
@@ -114,4 +118,11 @@
   
 .navButtons{
   margin: 10px;
+}
+
+
+.activeSubItem {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1); 
+  min-width: 100% !important;
 }
