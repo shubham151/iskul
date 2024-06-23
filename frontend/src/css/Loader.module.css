@@ -1,0 +1,42 @@
+.loaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background-color: #1f1e1e; /* Optional: Add a white background with some opacity */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .text {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust size as needed */
+  }
+  

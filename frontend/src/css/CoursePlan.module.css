@@ -1,0 +1,130 @@
+.coursePlanContainer {
+  min-height: 100vh;
+  color: white;
+}
+
+.sidebar {
+  max-width: 25% !important;
+  background-color: #1f1e1e;
+  box-shadow: 2px 2px 5px rgba(231, 229, 229, 0.2);
+
+  display: flex;
+  height: 100vh;
+  color: rgb(237, 231, 231);
+}
+
+
+
+
+.mainContent {
+  flex: 1;
+
+  padding: 20px;
+  background-color:  #1e1c1e;
+}
+
+
+
+.videoContainer {
+  margin-bottom: 20px;
+}
+
+.summary {
+  background-color: #1f1e1e;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.flashCards {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.SidebarCollapse {
+  min-width: 100% !important;
+  border-color: aliceblue;
+  border-width: 1pt;
+}
+
+
+.quiz {
+  margin-top: 20px;
+}
+
+.quizQuestion {
+  margin-bottom: 20px;
+}
+
+
+.coursePlanContainer {
+    display: flex;
+  }
+  
+  
+  .sidebar h2 {
+    margin: 0;
+    background-color: #343a40;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    
+  }
+
+ 
+  
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    text-align: left;
+  }
+  
+
+  
+  .sidebar ul li:hover {
+    background-color: #1f1e1e;
+
+  }
+  
+  
+
+  .mainContent {
+    flex-grow: 1;
+  }
+  
+  .videoContainer iframe {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .summary {
+    margin-top: 20px;
+  }
+  
+  .flashCards, .quiz {
+    margin-top: 20px;
+  }
+  
+  .flashCard, .quizQuestion {
+    background-color:  #1f1e1e;;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+  }
+  
+.navButtons{
+  margin: 10px;
+}
+
+
+.activeSubItem {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1); 
+  min-width: 100% !important;
+}
+
+
