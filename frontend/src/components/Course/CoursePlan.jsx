@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import styles from "../../css/CoursePlan.module.css";
 import tempData from "../../../../data/secondPageInput.json";
 import { Sidebar } from "flowbite-react";
+import { FaBookAtlas } from "react-icons/fa6";
 import {
   HiArrowSmRight,
   HiChartPie,
@@ -50,8 +51,10 @@ function CoursePlan() {
     }
   };
 
-  const handleSectionClick = (section) => {
+  const handleSectionClick = (section, index) => {
     setActiveSection(section);
+    console.log(index)
+    setSelectedMainTopicIndex(index)
   };
 
   const handleNext = () => {
@@ -100,6 +103,10 @@ function CoursePlan() {
         aria-label="Sidebar with multi-level dropdown"
         className={styles.sidebar}
       >
+        <div className={styles.logoContainer}>
+          <h1 className={styles.projectName}>Iskul</h1>
+          <hr/>
+        </div>
         <Sidebar.Items>
           <Sidebar.ItemGroup>
             {data.map((topic, topicIndex) => (
@@ -112,7 +119,9 @@ function CoursePlan() {
                 className={styles.SidebarCollapse}
               >
                 <>
-                  {topic.sub_topics.map((subTopic, subIndex) => (
+                  {
+                  
+                  topic.sub_topics.map((subTopic, subIndex) => (
                     <Sidebar.Item
                       icon={FaBookOpen}
                       className={`${styles.sidebarItem} ${
@@ -126,11 +135,13 @@ function CoursePlan() {
                   <Sidebar.Item
                     icon={FaBookOpen}
                     className={`${styles.sidebarItem} ${
-                      activeSection === "flashcard" ? styles.activeSubItem : ""
-                    }`}
+                        activeSection === "flashcard" && selectedMainTopicIndex === topicIndex
+                          ? styles.activeSubItem
+                          : ""
+                      }`}
                     onClick={() => {
                       handleSubTopicClick("others");
-                      handleSectionClick("flashcard");
+                      handleSectionClick("flashcard", topicIndex);
                     }}
                   >
                     FlashCard
@@ -138,10 +149,13 @@ function CoursePlan() {
                   <Sidebar.Item
                     icon={FaBookOpen}
                     className={`${styles.sidebarItem} ${
-                      activeSection === "quiz" ? styles.activeSubItem : ""
-                    }`}
+                        activeSection === "quiz" && selectedMainTopicIndex === topicIndex
+                          ? styles.activeSubItem
+                          : ""
+                      }`}
                     onClick={() => {
-                      handleSectionClick("quiz");
+                        handleSubTopicClick("others");
+                      handleSectionClick("quiz", topicIndex);
                     }}
                   >
                     Quiz
