@@ -28,37 +28,33 @@
         ],
         "quiz":[
             {
-                "question1":{
-                    "question": "Pehla sawal",
-                    "option1": "4 karod",
-                    "option2": "5 karod",
-                    "option3": "6 karod",
-                    "option4": "7 karod",
-                    "correct_response": "option B"
-                }
+                "question": "Pehla sawal",
+                "option1": "4 karod",
+                "option2": "5 karod",
+                "option3": "6 karod",
+                "option4": "7 karod",
+                "correct_response": "option B"
             },
-
             {
-                "question2":{
-                    "question": "Dusra sawal",
-                    "option1": "4 karod",
-                    "option2": "5 karod",
-                    "option3": "6 karod",
-                    "option4": "7 karod",
-                    "correct_response": "option C"
-                }
+                "question": "Dusra sawal",
+                "option1": "4 karod",
+                "option2": "5 karod",
+                "option3": "6 karod",
+                "option4": "7 karod",
+                "correct_response": "option C"
             },
-
             {
-                "question3":{
-                    "question": "Teesra sawal",
-                    "option1": "4 karod",
-                    "option2": "5 karod",
-                    "option3": "6 karod",
-                    "option4": "7 karod",
-                    "correct_response": "option D"
-                }
+                "question": "Teesra sawal",
+                "option1": "4 karod",
+                "option2": "5 karod",
+                "option3": "6 karod",
+                "option4": "7 karod",
+                "correct_response": "option D"
             }
+
+            
+
+            
         ]
     },
     {
@@ -90,36 +86,28 @@
         ],
         "quiz":[
             {
-                "question1":{
-                    "question": "Pehla sawal",
-                    "option1": "4 karod",
-                    "option2": "5 karod",
-                    "option3": "6 karod",
-                    "option4": "7 karod",
-                    "correct_response": "option B"
-                }
+                "question": "Pehla sawal",
+                "option1": "4 karod",
+                "option2": "5 karod",
+                "option3": "6 karod",
+                "option4": "7 karod",
+                "correct_response": "option B"
             },
-
             {
-                "question2":{
-                    "question": "Dusra sawal",
-                    "option1": "4 karod",
-                    "option2": "5 karod",
-                    "option3": "6 karod",
-                    "option4": "7 karod",
-                    "correct_response": "option C"
-                }
+                "question": "Dusra sawal",
+                "option1": "4 karod",
+                "option2": "5 karod",
+                "option3": "6 karod",
+                "option4": "7 karod",
+                "correct_response": "option C"
             },
-
             {
-                "question3":{
-                    "question": "Teesra sawal",
-                    "option1": "4 karod",
-                    "option2": "5 karod",
-                    "option3": "6 karod",
-                    "option4": "7 karod",
-                    "correct_response": "option D"
-                }
+                "question": "Teesra sawal",
+                "option1": "4 karod",
+                "option2": "5 karod",
+                "option3": "6 karod",
+                "option4": "7 karod",
+                "correct_response": "option D"
             }
         ]
     }
