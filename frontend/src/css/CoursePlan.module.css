@@ -16,7 +16,6 @@
 
 
 
-
 .mainContent {
   flex: 1;
 
@@ -42,6 +41,10 @@
   margin-right: 50px;
 }
 
+.SidebarCollapse {
+  min-width: 100% !important;
+  border-color: aliceblue;
+}
 
 
 .quiz {
@@ -67,7 +70,7 @@
   
   .sidebar ul {
     list-style-type: none;
-    margin: 0;
+    
   }
 
  
@@ -76,10 +79,10 @@
     display: flex;
     flex-direction: column;
     align-items: self-start;
-    padding-left: none !important;
     text-align: left;
   }
   
+
   
   .sidebar ul li:hover {
     background-color: #1f1e1e;;

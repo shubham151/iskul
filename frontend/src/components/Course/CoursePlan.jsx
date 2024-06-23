@@ -68,6 +68,7 @@ function CoursePlan() {
               isOpen={expandedTopics[topicIndex]}
               onToggle={() => handleTopicToggle(topicIndex)}
               renderChevronIcon={renderChevronIcon}
+              className={styles.SidebarCollapse}
             >
               <>
                 {topic.sub_topics.map((subTopic, subIndex) => (
