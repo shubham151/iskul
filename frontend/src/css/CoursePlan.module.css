@@ -6,7 +6,7 @@
 .sidebar {
   max-width: 25% !important;
   background-color: #1f1e1e;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 5px rgba(231, 229, 229, 0.2);
 
   display: flex;
   height: 100vh;
@@ -15,11 +15,13 @@
 
 
 
+
+
 .mainContent {
   flex: 1;
 
   padding: 20px;
-  background-color: rgb(19, 27, 80);
+  background-color:  #292829;
 }
 
 

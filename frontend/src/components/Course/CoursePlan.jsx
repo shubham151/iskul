@@ -4,6 +4,7 @@ import styles from '../../css/CoursePlan.module.css';
 import tempData from '../../../../data/secondPageInput.json';
 import { Sidebar } from 'flowbite-react';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineMinusSm, HiOutlinePlusSm, HiShoppingBag, HiTable, HiUser } from 'react-icons/hi';
+import { FaBookOpen } from "react-icons/fa"
 import { twMerge } from 'tailwind-merge';
 
 import FlashCard from './FlashCard';
@@ -70,14 +71,20 @@ function CoursePlan() {
             >
               <>
                 {topic.sub_topics.map((subTopic, subIndex) => (
-                  <Sidebar.Item className={styles.sidebarItem} onClick={() => handleSubTopicClick(subTopic)}>
+                  <Sidebar.Item 
+                  icon={FaBookOpen}
+                  className={styles.sidebarItem} onClick={() => handleSubTopicClick(subTopic)}>
                   {subTopic.sub_topic}
                 </Sidebar.Item>
                 ))}
-                <Sidebar.Item onClick={() => handleSectionClick('flashcard')}>
+                <Sidebar.Item 
+                icon={FaBookOpen}
+                onClick={() => handleSectionClick('flashcard')}>
                   FlashCard
                 </Sidebar.Item>
-                <Sidebar.Item onClick={() => handleSectionClick('quiz')}>
+                <Sidebar.Item 
+                icon={FaBookOpen}
+                onClick={() => handleSectionClick('quiz')}>
                   Quiz
                 </Sidebar.Item>
               </>
