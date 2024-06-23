@@ -1,0 +1,34 @@
+{
+    "quiz": [
+        {
+            "question1": {
+                "question": "What is the minimum Python knowledge required to follow Suraj's six-week deep learning curriculum?",
+                "option1": "Advanced",
+                "option2": "Intermediate",
+                "option3": "Basic",
+                "option4": "None",
+                "correct_response": "option3"
+            }
+        },
+        {
+            "question2": {
+                "question": "What is the purpose of an experience replay buffer in deep Q-learning?",
+                "option1": "To store the Q table",
+                "option2": "To test the understanding of the concepts",
+                "option3": "To collect data to train the Q network",
+                "option4": "To decide actions for the robot",
+                "correct_response": "option3"
+            }
+        },
+        {
+            "question3": {
+                "question": "What is the benefit of separating Q-values into state values and advantage functions in the dueling network approach?",
+                "option1": "It slows down the learning process",
+                "option2": "It makes the network more prone to noisy updates",
+                "option3": "It enables faster and more reliable learning",
+                "option4": "It reduces the overall performance in game playing tasks",
+                "correct_response": "option3"
+            }
+        }
+    ]
+}
