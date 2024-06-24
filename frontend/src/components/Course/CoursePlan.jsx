@@ -22,18 +22,19 @@ import QuizQuestion from "../Quiz/QuizQuestion";
 import YouTube from "react-youtube";
 
 function CoursePlan() {
-  const location = useLocation("../../../data/");
+    const location = useLocation();
+    const { data } = location.state || {};
+    console.log(data)
   //   const { data } = location.state || {};
-  const data = tempData;
   const [selectedSubTopic, setSelectedSubTopic] = useState(
-    data?.[0]?.sub_topics?.[0] || null
+    data?.[0]?.sub_topic?.[0] || null
   );
   const [selectedMainTopicIndex, setSelectedMainTopicIndex] = useState(0);
   const [activeSection, setActiveSection] = useState("course");
   const [expandedTopics, setExpandedTopics] = useState({});
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [activeSubTopic, setActiveSubTopic] = useState(
-    data?.[0]?.sub_topics?.[0] || null
+    data?.[0]?.sub_topic?.[0] || null
   );
 
   if (!data) {
@@ -121,7 +122,7 @@ function CoursePlan() {
                 <>
                   {
                   
-                  topic.sub_topics.map((subTopic, subIndex) => (
+                  topic.sub_topic.map((subTopic, subIndex) => (
                     <Sidebar.Item
                       icon={FaBookOpen}
                       className={`${styles.sidebarItem} ${
@@ -171,12 +172,12 @@ function CoursePlan() {
         {activeSection === "course" && selectedSubTopic && (
           <div className={styles.videoContainer}>
             <YouTube
-              videoId={selectedSubTopic.url}
+              videoId={selectedSubTopic.url.split("v=")[1]}
               className={styles.youtubePlayer}
             />
             <div className={styles.summary}>
               <h3>Summary</h3>
-              <p>{selectedSubTopic.captions}</p>
+              <p>{selectedSubTopic.summary}</p>
             </div>
           </div>
         )}

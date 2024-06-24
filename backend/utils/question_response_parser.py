@@ -36,7 +36,7 @@ def parse_questions_with_regex(lines):
                     "option2": data['option2'].strip(),
                     "option3": data['option3'].strip(),
                     "option4": data['option4'].strip(),
-                    "correct_response": correct_option
+                    "correct_response": data[correct_option].strip() 
                 }
             }
 

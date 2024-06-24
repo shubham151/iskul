@@ -3,6 +3,7 @@ from utils.constants import question_prompt
 from utils.question_response_parser import parse_questions_with_regex
 
 def generate_quiz(txts):
+
     questions = []
     for txt in txts:
         question = client.chat.completions.create(
@@ -14,8 +15,11 @@ def generate_quiz(txts):
             ],
             model="llama3-70b-8192",
         )
-        
+    
         questions.append(question.choices[0].message.content)
     qq = parse_questions_with_regex(questions)
-    return qq
+    questions = []
+    for i,q in enumerate(qq):
+        questions.append(q[f"question{i+1}"])
+    return questions
     

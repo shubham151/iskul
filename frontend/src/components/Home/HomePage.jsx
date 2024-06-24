@@ -16,9 +16,19 @@ function Homepage() {
     },
     onSubmit: async (values) => {
       try {
-        const response = {};
         console.log("values", values);
-        // const response = await axios.post('', values);
+        
+        const response = await axios.get(
+          "http://127.0.0.1:5000/app",
+          {
+            params: {
+              topic: values.topic,
+              duration: values.hours,
+              level: values.level,
+            },
+            timeout: 300000  
+          }
+        );
         navigate("/course-plan", { state: { data: response.data } });
       } catch (error) {
         console.error("Error submitting form:", error);

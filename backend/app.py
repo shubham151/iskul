@@ -1,8 +1,10 @@
 import json
 from flask import Flask, jsonify, request
 from services.services_main import service
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/app', methods=['GET'])
 def get_course():
